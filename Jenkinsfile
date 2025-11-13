@@ -62,7 +62,7 @@ pipeline{
         }
         stage("TRIVY Image Scan"){
             steps{
-                sh "trivy image acecloudacademy/hotstar:latest > trivyimage.txt" 
+                sh "trivy image namratareddy/hotstar:latest > trivyimage.txt" 
             }
         }
         stage(" Docker Push"){
@@ -94,9 +94,9 @@ pipeline{
                     <p>Started by: ${buildUser}</p>
                     <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
                 """,
-                to: 'vijaybl2706@gmail.com',
-                from: 'vijaybl2706@gmail.com',
-                replyTo: 'vijaybl2706@gmail.com',
+                to: 'reddynamrata99@gmail.com',
+                from: 'reddynamrata99@gmail.com',
+                replyTo: 'reddynamrata99@gmail.com',
                 mimeType: 'text/html',
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
